@@ -1,0 +1,13 @@
+// Vitest Snapshot v1
+
+exports[`html creates dom elements > returns only the first child 1`] = `
+<div>
+  test div creation
+</div>
+`;
+
+exports[`html creates dom elements > should match snapshot 1`] = `
+<div>
+  test div creation
+</div>
+`;

@@ -1,0 +1,36 @@
+.terminal-container {
+  color-scheme: dark;
+  background: #242424;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  max-height: 25vh;
+  overflow: auto;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Press Start 2P', cursive;
+  transform: translateY(-100%);
+}
+
+.terminal-container--open {
+  transform: translateY(0);
+}
+
+.terminal-input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: inherit;
+  text-shadow: inherit;
+  flex: 1;
+}
+
+.terminal-input-container {
+  display: flex;
+}
+
+.terminal-output-item {
+  white-space: pre-wrap;
+  word-break: break-all;
+}

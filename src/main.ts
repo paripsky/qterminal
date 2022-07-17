@@ -1,0 +1,1 @@
+export { createTerminal } from './terminal';
