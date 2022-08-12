@@ -3,5 +3,9 @@
 
 .terminal-container {
   background: black;
-  color: lawngreen
+  color: lawngreen;
+}
+
+.terminal-output-item--error {
+  color: inherit;
 }

@@ -1,52 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="/src/themes/base.css"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 400;
 
-        color-scheme: light dark;
-        color: rgba(255, 255, 255, 0.87);
-        background-color: #5b5b61;
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link id="base-style" href="/src/themes/base.scss" rel="stylesheet" />
+  <link disabled id="eightees-style" href="/src/themes/80s.scss" rel="stylesheet" />
+  <link id="cyber-style" disabled href="/src/themes/cyber.scss" rel="stylesheet" />
+  <style>
+    :root {
+      font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
 
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-text-size-adjust: 100%;
+      color-scheme: light dark;
+      color: rgba(255, 255, 255, 0.87);
+      background-color: #5b5b61;
+
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    #app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    h2 {
+      margin-top: 3em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <h2>Pick a theme:</h2>
+    <div>
+      <button onclick="setTheme('default')">default</button>
+      <button onclick="setTheme('80s')">80s</button>
+      <button onclick="setTheme('cyber')">Cyber</button>
+    </div>
+  </div>
+  <script>
+    const base = document.getElementById("base-style");
+    const eightees = document.getElementById("eightees-style");
+    const cyber = document.getElementById("cyber-style");
+
+    function setTheme(theme) {
+      switch (theme) {
+        case "default":
+          base.disabled = false;
+          eightees.disabled = true;
+          cyber.disabled = true;
+          break;
+        case "80s":
+          base.disabled = true;
+          eightees.disabled = false;
+          cyber.disabled = true;
+          break;
+        case "cyber":
+          base.disabled = true;
+          eightees.disabled = true;
+          cyber.disabled = false;
+          break;
       }
+    }
+  </script>
+  <script type="module">
+    import { createTerminal } from "/src/main.ts";
 
-      body {
-        padding: 0;
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module">
-      import { createTerminal } from "/src/main.ts";
+    createTerminal({
+      startOpen: true,
+      closeOnClickOutside: false
+    });
+  </script>
+</body>
 
-      createTerminal({
-        startOpen: true
-      });
-    </script>
-  </body>
 </html>

@@ -1,4 +1,8 @@
 .terminal-container {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 100%;
   color-scheme: dark;
   background: #242424;
   padding: 1em;
@@ -9,6 +13,16 @@
   transition: transform 0.2s ease-in-out;
   font-family: 'Press Start 2P', cursive;
   transform: translateY(-100%);
+
+  & * {
+    box-sizing: border-box;
+    color: inherit;
+    background: inherit;
+    text-shadow: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
 }
 
 .terminal-container--open {
@@ -28,6 +42,10 @@
 
 .terminal-input-container {
   display: flex;
+}
+
+.terminal-output-item--error {
+  color: rgb(194, 84, 84);
 }
 
 .terminal-output-item {

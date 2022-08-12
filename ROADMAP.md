@@ -1,0 +1,12 @@
+- Pluggable & Themable Quake style terminal for the web
+- Animated open with shortcuts
+- customize the css using css or allow to pass css overrides
+- async + deferred, start automatically if has attribute?
+- autocomplete for history and available commands
+- built in themes, etc
+- plugins
+- stackblitz dmeo
+- ssr support?
+- prefers-reduced-motion support
+- persist history in local storage (50 items as default)
+- accessability
