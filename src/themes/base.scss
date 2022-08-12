@@ -1,6 +1,6 @@
 .terminal-container {
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   color-scheme: dark;
@@ -13,6 +13,7 @@
   transition: transform 0.2s ease-in-out;
   font-family: 'Press Start 2P', cursive;
   transform: translateY(-100%);
+  z-index: 99999;
 
   & * {
     box-sizing: border-box;
