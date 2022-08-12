@@ -9,7 +9,7 @@ const config = {
   title: 'QTerminal',
   tagline: 'A Quake like teminal for the web',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/qterminal/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
