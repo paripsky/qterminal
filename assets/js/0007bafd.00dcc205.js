@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[8782],{4006:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/qterminal/blog/tags/facebook","allTagsPath":"/qterminal/blog/tags","count":1}')}}]);
