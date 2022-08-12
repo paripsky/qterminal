@@ -18,8 +18,8 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm ci -w qterminal-docs
-          npm run build -w qterminal-docs
+          npm ci -w docs
+          npm run build -w docs
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.0
