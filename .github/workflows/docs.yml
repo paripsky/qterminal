@@ -20,7 +20,8 @@ jobs:
           node-version: 18
       - name: Install and Build 🔧
         run: |
-          HUSKY=0 npm ci -w docs
+          npm pkg delete scripts.prepare
+          npm ci -w docs
           npm run build -w docs
 
       - name: Deploy 🚀
